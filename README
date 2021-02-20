@@ -1,0 +1,25 @@
+# install dependencies
+pip install -r requirements.txt
+
+# Test local
+python main.py
+
+## open http://127.0.0.1:5000/docs 
+
+# Deploy on Heroku 
+## Create app name "heroku-fastapi" 
+heroku login
+heroku create heroku-fastapi
+
+# GIT
+heroku git:remote -a blooming-earth-26586
+ heroku ps:scale web=1 --app occ1212-api
+git remote -v
+git add .
+git commit -m "Demo"
+git push heroku master
+heroku open
+
+
+Note : port must be higher that 5000 [ERROR: [Errno 13] Permission denied]
+5555

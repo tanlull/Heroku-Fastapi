@@ -1,0 +1,9 @@
+pymessenger4
+starlette==0.13.6
+fastapi
+uvicorn
+python-decouple
+pytest
+requests
+requests-toolbelt
+six

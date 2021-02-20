@@ -20,6 +20,9 @@ git add .
 git commit -m "Demo"
 git push heroku master
 
+##In case push heroku error : src refspec master does not match any use
+git push heroku HEAD:master 
+
 #In case no web process running the run
 heroku ps:scale web=1 --app heroku-fastapi
 heroku open

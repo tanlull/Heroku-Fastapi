@@ -1,34 +1,34 @@
-# install dependencies
+#Install dependencies
 pip install -r requirements.txt
 
-# Test local
+#Test on localhist
 python main.py
 
-## open http://127.0.0.1:5000/docs 
+##open http://127.0.0.1:5000/docs 
 
-# Deploy on Heroku 
-## Create app name "heroku-fastapi" 
-
-
+#Deploy on Heroku 
+##Create app name "heroku-fastapi" 
 heroku login
 heroku create heroku-fastapi
+
 ## https://heroku-fastapi.herokuapp.com/ | https://git.heroku.com/heroku-fastapi.git
 
-# GIT Deploy
+#GIT Deploy
 git init
 heroku git:remote -a heroku-fastapi
 git add .
 git commit -m "Demo"
 git push heroku master
 
-# In case no web process running the run
+#In case no web process running the run
 heroku ps:scale web=1 --app heroku-fastapi
 heroku open
 
-## go to https://heroku-fastapi.herokuapp.com/docs for testing
+##Go to https://heroku-fastapi.herokuapp.com/docs for testing
 
 
-# Optional save to github
+#Optional save to github
+git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/tanlull/Heroku-Fastapi.git
-
+git push -u origin main

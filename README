@@ -8,18 +8,27 @@ python main.py
 
 # Deploy on Heroku 
 ## Create app name "heroku-fastapi" 
+
+
 heroku login
 heroku create heroku-fastapi
+## https://heroku-fastapi.herokuapp.com/ | https://git.heroku.com/heroku-fastapi.git
 
-# GIT
-heroku git:remote -a blooming-earth-26586
- heroku ps:scale web=1 --app occ1212-api
-git remote -v
+# GIT Deploy
+git init
+heroku git:remote -a heroku-fastapi
 git add .
 git commit -m "Demo"
 git push heroku master
+
+# In case no web process running the run
+heroku ps:scale web=1 --app heroku-fastapi
 heroku open
 
+## go to https://heroku-fastapi.herokuapp.com/docs for testing
 
-Note : port must be higher that 5000 [ERROR: [Errno 13] Permission denied]
-5555
+
+# Optional save to github
+git branch -M main
+git remote add origin https://github.com/tanlull/Heroku-Fastapi.git
+
